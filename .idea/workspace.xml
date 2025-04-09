@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary">
+    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Add Prettier as a dev dependency and update GoalTracker component for improved code formatting and UI consistency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -128,7 +128,7 @@
       <workItem from="1744108507254" duration="13593000" />
       <workItem from="1744127193755" duration="76000" />
       <workItem from="1744127285551" duration="54000" />
-      <workItem from="1744206579621" duration="774000" />
+      <workItem from="1744206579621" duration="3707000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <option name="closed" value="true" />
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744124015531</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Prettier as a dev dependency and update GoalTracker component for improved code formatting and UI consistency">
+      <option name="closed" value="true" />
+      <created>1744207446162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744207446162</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +209,7 @@
     <MESSAGE value="Add GoalTracker component and integrate with App; update styles with Tailwind CSS,&#10;added CRUD operations" />
     <MESSAGE value="Implement authentication and CRUD operations for goals; add API routes and update environment configuration" />
     <MESSAGE value="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary" />
+    <MESSAGE value="Add Prettier as a dev dependency and update GoalTracker component for improved code formatting and UI consistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Prettier as a dev dependency and update GoalTracker component for improved code formatting and UI consistency" />
   </component>
 </project>
