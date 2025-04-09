@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Add GoalTracker component and integrate with App; update styles with Tailwind CSS,&#10;added CRUD operations">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/cors.php" afterDir="false" />
+    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database/migrations/2025_04_07_155318_create_personal_access_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GoalTracker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoalTracker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +15,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nizarberyan&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -51,6 +46,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nizarberyan/Fitness-Goals.git&quot;,
+    &quot;accountId&quot;: &quot;fc6c5611-59fb-4af6-a073-b7b3f4bd50f6&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -76,7 +77,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "discord-application",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -117,7 +118,9 @@
       <updated>1744040792036</updated>
       <workItem from="1744040794425" duration="742000" />
       <workItem from="1744099406000" duration="3675000" />
-      <workItem from="1744108507254" duration="11465000" />
+      <workItem from="1744108507254" duration="13593000" />
+      <workItem from="1744127193755" duration="76000" />
+      <workItem from="1744127285551" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <option name="closed" value="true" />
@@ -143,7 +146,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744115153565</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement authentication and CRUD operations for goals; add API routes and update environment configuration">
+      <option name="closed" value="true" />
+      <created>1744123021219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744123021219</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement authentication and CRUD operations for goals; add API routes and update environment configuration">
+      <option name="closed" value="true" />
+      <created>1744123031431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744123031431</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary">
+      <option name="closed" value="true" />
+      <created>1744124015531</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744124015531</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +191,8 @@
     <MESSAGE value="Add initial project files and setup for Laravel application" />
     <MESSAGE value="Initialize project using Create React App" />
     <MESSAGE value="Add GoalTracker component and integrate with App; update styles with Tailwind CSS,&#10;added CRUD operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add GoalTracker component and integrate with App; update styles with Tailwind CSS,&#10;added CRUD operations" />
+    <MESSAGE value="Implement authentication and CRUD operations for goals; add API routes and update environment configuration" />
+    <MESSAGE value="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary" />
   </component>
 </project>
