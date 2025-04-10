@@ -5,6 +5,8 @@ import GoalForm from "./components/GoalForm";
 import GoalItem from "./components/GoalItem";
 import ProgressModal from "./components/ProgressModal";
 import PerformanceSummary from "./components/PerformanceSummary";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 const API_BASE_URL = "http://127.0.0.1:8000/api/goals";
 
@@ -16,6 +18,7 @@ const GoalTracker = () => {
   const [newProgress, setNewProgress] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { t } = useTranslation();
 
   const getAuthHeaders = useCallback(() => {
     const token = localStorage.getItem("token");
@@ -33,12 +36,12 @@ const GoalTracker = () => {
       setGoals(response.data);
     } catch (err) {
       console.error("Error fetching goals:", err);
-      setError("Failed to fetch goals. Please try again later.");
-      alert("Failed to fetch goals. Please try again later.");
+      setError(t("errors.fetchGoals"));
+      alert(t("errors.fetchGoals"));
     } finally {
       setLoading(false);
     }
-  }, [getAuthHeaders]);
+  }, [getAuthHeaders, t]);
 
   useEffect(() => {
     fetchGoals();
@@ -60,8 +63,8 @@ const GoalTracker = () => {
       setNewGoal("");
     } catch (err) {
       console.error("Error adding goal:", err);
-      setError("Failed to add goal. Please try again.");
-      alert("Failed to add goal. Please try again.");
+      setError(t("errors.addGoal"));
+      alert(t("errors.addGoal"));
     }
   };
 
@@ -86,8 +89,8 @@ const GoalTracker = () => {
       closeModal();
     } catch (err) {
       console.error("Error updating goal:", err);
-      setError("Failed to update goal. Please try again.");
-      alert("Failed to update goal. Please try again.");
+      setError(t("errors.updateGoal"));
+      alert(t("errors.updateGoal"));
     }
   };
 
@@ -100,8 +103,8 @@ const GoalTracker = () => {
       setGoals((prevGoals) => prevGoals.filter((_, i) => i !== index));
     } catch (err) {
       console.error("Error deleting goal:", err);
-      setError("Failed to delete goal. Please try again.");
-      alert("Failed to delete goal. Please try again.");
+      setError(t("errors.deleteGoal"));
+      alert(t("errors.deleteGoal"));
     }
   };
 
@@ -143,7 +146,7 @@ const GoalTracker = () => {
 
   if (loading) {
     return (
-      <div className="p-6 max-w-xl mx-auto text-center">Loading goals...</div>
+      <div className="p-6 max-w-xl mx-auto text-center">{t("loading")}</div>
     );
   }
   if (error) {
@@ -158,17 +161,19 @@ const GoalTracker = () => {
     <div className="p-6 max-w-2xl mx-auto space-y-8">
       <header className="text-center">
         <h1 className="text-4xl font-extrabold flex items-center justify-center gap-3 text-gray-800">
-          <FiTarget className="text-green-500" /> Goal Tracker
+          <FiTarget className="text-green-500" /> {t("goalTracker")}
         </h1>
-        <p className="text-gray-600 mt-2">Stay on track with your progress</p>
+        <p className="text-gray-600 mt-2">{t("welcomeMessage")}</p>
+        <div className="mt-4">
+          <LanguageSwitcher />
+        </div>
       </header>
-
       <GoalForm
         newGoal={newGoal}
         onChange={handleInputChange}
         onAdd={addGoal}
+        t={t}
       />
-
       <div className="space-y-5">
         {goals.length > 0 ? (
           goals.map((goal, index) => (
@@ -179,27 +184,26 @@ const GoalTracker = () => {
               onUpdate={openModal}
               onDelete={deleteGoal}
               getColor={getProgressColor}
+              t={t}
             />
           ))
         ) : (
-          <div className="text-center text-gray-500">
-            No goals added yet. Start by adding one!
-          </div>
+          <div className="text-center text-gray-500">{t("noGoals")}</div>
         )}
       </div>
-
       {isModalOpen && selectedGoalIndex !== null && (
         <ProgressModal
           newProgress={newProgress}
           onChange={handleProgressChange}
           onClose={closeModal}
           onSave={updateGoalProgress}
+          t={t}
         />
       )}
-
       <PerformanceSummary
         completedGoalsCount={completedGoalsCount}
         averageProgress={averageProgress}
+        t={t}
       />
     </div>
   );

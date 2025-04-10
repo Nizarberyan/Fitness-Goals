@@ -4,18 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Refactor GoalTracker component to use functional components and hooks; add react-icons for improved UI and update package dependencies">
-      <change afterPath="$PROJECT_DIR$/src/components/GoalForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GoalItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PerformanceSummary.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProgressModal.jsx" afterDir="false" />
+    <list default="true" id="3083b4fa-5197-48fd-b3f0-a14dc39bd42b" name="Changes" comment="Add GoalForm, GoalItem, ProgressModal, and PerformanceSummary components; refactor GoalTracker to utilize new components for improved structure and UI">
+      <change afterPath="$PROJECT_DIR$/src/components/LanguageSwitcher.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18next-scanner.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/i18n.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GoalTracker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoalTracker.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GoalTracker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoalTracker.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoalForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoalForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoalItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoalItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PerformanceSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PerformanceSummary.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProgressModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +80,9 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -87,8 +103,8 @@
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\riann\\Documents\\github\\fitness-goals\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\riann\\Documents\\github\\fitness-goals\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,6 +119,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\riann\Documents\github\fitness-goals\src" />
+      <recent name="C:\Users\riann\Documents\github\fitness-goals\src\utils" />
       <recent name="C:\Users\riann\Documents\github\fitness-goals\src\components" />
       <recent name="C:\Users\riann\Documents\github\fitness-goals" />
     </key>
@@ -132,7 +150,9 @@
       <workItem from="1744108507254" duration="13593000" />
       <workItem from="1744127193755" duration="76000" />
       <workItem from="1744127285551" duration="54000" />
-      <workItem from="1744206579621" duration="7327000" />
+      <workItem from="1744206579621" duration="8333000" />
+      <workItem from="1744273469206" duration="1331000" />
+      <workItem from="1744276189231" duration="11581000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project using Create React App">
       <option name="closed" value="true" />
@@ -198,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744211010084</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add GoalForm, GoalItem, ProgressModal, and PerformanceSummary components; refactor GoalTracker to utilize new components for improved structure and UI">
+      <option name="closed" value="true" />
+      <created>1744216101750</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744216101750</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +251,7 @@
     <MESSAGE value="Update GoalTracker component: enhance progress handling, improve UI, and add performance summary" />
     <MESSAGE value="Add Prettier as a dev dependency and update GoalTracker component for improved code formatting and UI consistency" />
     <MESSAGE value="Refactor GoalTracker component to use functional components and hooks; add react-icons for improved UI and update package dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor GoalTracker component to use functional components and hooks; add react-icons for improved UI and update package dependencies" />
+    <MESSAGE value="Add GoalForm, GoalItem, ProgressModal, and PerformanceSummary components; refactor GoalTracker to utilize new components for improved structure and UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add GoalForm, GoalItem, ProgressModal, and PerformanceSummary components; refactor GoalTracker to utilize new components for improved structure and UI" />
   </component>
 </project>

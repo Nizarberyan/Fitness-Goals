@@ -1,7 +1,7 @@
-const ProgressModal = ({ newProgress, onChange, onClose, onSave }) => (
+const ProgressModal = ({ newProgress, onChange, onClose, onSave, t }) => (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
     <div className="bg-white p-6 rounded-lg w-80 shadow-xl">
-      <h2 className="text-2xl font-semibold mb-4">Update Progress</h2>
+      <h2 className="text-2xl font-semibold mb-4">{t("modalHeader")}</h2>
       <input
         type="number"
         value={newProgress}
@@ -15,13 +15,13 @@ const ProgressModal = ({ newProgress, onChange, onClose, onSave }) => (
           onClick={onClose}
           className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           onClick={onSave}
           className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
-          Save
+          {t("buttons.save")}
         </button>
       </div>
     </div>
