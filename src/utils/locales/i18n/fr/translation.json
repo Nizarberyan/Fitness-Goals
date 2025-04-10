@@ -1,0 +1,26 @@
+{
+  "goalTracker": "Suivi d'Objectifs",
+  "welcomeMessage": "Suivez vos objectifs et surveillez votre progression au fil du temps",
+  "formPlaceholder": "Entrez un nouvel objectif",
+  "modalHeader": "Mise à jour de la progression",
+  "loading": "Chargement des objectifs...",
+  "noGoals": "Aucun objectif ajouté pour l'instant. Commencez par en ajouter un!",
+  "errors": {
+    "fetchGoals": "Échec du chargement des objectifs. Veuillez réessayer plus tard.",
+    "addGoal": "Échec de l'ajout de l'objectif. Veuillez réessayer.",
+    "updateGoal": "Échec de la mise à jour de l'objectif. Veuillez réessayer.",
+    "deleteGoal": "Échec de la suppression de l'objectif. Veuillez réessayer."
+  },
+  "buttons": {
+    "save": "sauvegarder",
+    "cancel": "annuler",
+    "delete": "Suprimmer",
+    "update": "Mis a jour",
+    "addGoal": "Ajouter un Goal"
+  },
+  "performance": {
+    "progress": "Progrès",
+    "completed": "Objectifs atteints",
+    "average": "Progrès Moyen"
+  }
+}

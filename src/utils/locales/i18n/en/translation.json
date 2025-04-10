@@ -1,0 +1,26 @@
+{
+  "goalTracker": "Goal Tracker",
+  "welcomeMessage": "Track your goals and monitor your progress over time",
+  "formPlaceholder": "Enter a new goal",
+  "modalHeader": "Update Progress",
+  "loading": "Loading goals...",
+  "noGoals": "No goals added yet. Start by adding one!",
+  "errors": {
+    "fetchGoals": "Failed to fetch goals. Please try again later.",
+    "addGoal": "Failed to add goal. Please try again.",
+    "updateGoal": "Failed to update goal. Please try again.",
+    "deleteGoal": "Failed to delete goal. Please try again."
+  },
+  "buttons": {
+    "save": "save",
+    "cancel": "cancel",
+    "delete": "Delete",
+    "update": "Update",
+    "addGoal": "Add Goal"
+  },
+  "performance": {
+    "progress": "progress",
+    "completed": "Completed Goals",
+    "average": "Average Progress"
+  }
+}
