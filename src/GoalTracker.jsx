@@ -9,9 +9,10 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;
+const ENV_TOKEN = process.env.REACT_APP_API_TOKEN;
 
 if (!API_BASE_URL) {
-  alert("sasasas");
+  alert("API_BASE_URL is not defined");
   throw new Error("API_BASE_URL is not defined");
 }
 
@@ -26,7 +27,7 @@ const GoalTracker = () => {
   const { t } = useTranslation();
 
   const getAuthHeaders = useCallback(() => {
-    const token = localStorage.getItem("token");
+    const token = ENV_TOKEN;
     return { Authorization: `Bearer ${token}` };
   }, []);
 
