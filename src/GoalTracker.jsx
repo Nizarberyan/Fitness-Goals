@@ -8,7 +8,12 @@ import PerformanceSummary from "./components/PerformanceSummary";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-const API_BASE_URL = "http://127.0.0.1:8000/api/goals";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+if (!API_BASE_URL) {
+  alert("sasasas");
+  throw new Error("API_BASE_URL is not defined");
+}
 
 const GoalTracker = () => {
   const [goals, setGoals] = useState([]);
@@ -57,7 +62,7 @@ const GoalTracker = () => {
       const response = await axios.post(
         API_BASE_URL,
         { name: newGoal, progress: 0 },
-        { headers: getAuthHeaders() },
+        { headers: getAuthHeaders() }
       );
       setGoals((prevGoals) => [...prevGoals, response.data]);
       setNewGoal("");
@@ -74,7 +79,7 @@ const GoalTracker = () => {
     const updatedGoal = { ...goals[selectedGoalIndex] };
     updatedGoal.progress = Math.max(
       0,
-      Math.min(100, parseInt(newProgress, 10)),
+      Math.min(100, parseInt(newProgress, 10))
     );
 
     try {
@@ -83,8 +88,8 @@ const GoalTracker = () => {
       });
       setGoals((prevGoals) =>
         prevGoals.map((goal, index) =>
-          index === selectedGoalIndex ? updatedGoal : goal,
-        ),
+          index === selectedGoalIndex ? updatedGoal : goal
+        )
       );
       closeModal();
     } catch (err) {
